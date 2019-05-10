@@ -1,0 +1,15 @@
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\bin\Debug\netcoreapp2.1\appsettings.json
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\bin\Debug\netcoreapp2.1\kennisAvondBot.deps.json
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\bin\Debug\netcoreapp2.1\kennisAvondBot.runtimeconfig.json
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\bin\Debug\netcoreapp2.1\kennisAvondBot.runtimeconfig.dev.json
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\bin\Debug\netcoreapp2.1\kennisAvondBot.dll
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\bin\Debug\netcoreapp2.1\kennisAvondBot.pdb
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.csprojAssemblyReference.cache
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.csproj.CoreCompileInputs.cache
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.RazorAssemblyInfo.cache
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.RazorAssemblyInfo.cs
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.AssemblyInfoInputs.cache
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.AssemblyInfo.cs
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.RazorTargetAssemblyInfo.cache
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.dll
+C:\Users\rhellenthal\source\repos\kennisAvondBot\kennisAvondBot\obj\Debug\netcoreapp2.1\kennisAvondBot.pdb

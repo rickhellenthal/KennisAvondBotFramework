@@ -1,0 +1,18 @@
+{
+    "name": "kennisAvondBot",
+    "description": "",
+    "services": [
+        {
+            "type": "endpoint",
+            "appId": "",
+            "appPassword": "",
+            "endpoint": "http://localhost:3978/api/messages",
+            "id": "d16bb0f0-7304-11e9-8313-a7da571cc4ab",
+            "name": "http://localhost:3978/api/messages"
+        }
+    ],
+    "padlock": "",
+    "version": "2.0",
+    "overrides": null,
+    "path": "C:\\Projects\\KennisAvondBotFramework\\Labs\\FinishedSolutions\\Lab02\\kennisAvondBot\\kennisAvondBot.bot"
+}
