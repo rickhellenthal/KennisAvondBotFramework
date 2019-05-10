@@ -2,6 +2,8 @@
 In dit lab maak je kennis met het Microsoft Bot Framework door een chat bot te ontwikkelen die een gebruiker kan herkennen.
 Deze bot zal gebruik maken van dialogs.
 
+Er is [een uitwerkinging](./FinishedSolutions) van deze lab beschikbaar voor het geval je ergens vast komt te zitten.
+
 ## **Prerequisites**
 - Visual Studio 2017 of nieuwer.
 - Het Bot Framework v4 SDK [template voor C#](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4) is geïnstalleerd.
