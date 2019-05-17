@@ -2,7 +2,7 @@
 In dit lab leer je hoe je een cognitieve service kan koppelen aan je bot om deze intelligenter te maken.
 Dit doen we door de QnA Maker service van Microsoft te gebruiken. Dit stelt de bot in staat om bepaalde vragen van een gebruiker te kunnen beantwoorden.
 
-Er is [een uitwerkinging](./FinishedSolutions) beschikbaar voor het geval je ergens vast komt te zitten.
+Er is [een uitwerking](./FinishedSolutions) beschikbaar voor het geval je ergens vast komt te zitten.
 
 ## **Prerequisites**
 - Visual Studio 2017 of nieuwer.
@@ -66,7 +66,7 @@ Doordat je zojuist de QnAMakerEndpoint hebt geregistreerd als singleton in `Star
 
 **1.4 - Aanroepen QnA Maker Service)**
 
-Alles staat nu klaar om de QnA Maker service aan te kunnen roepen. In lab 1 heb je de stap `AnswerQuestionStepAsync()` aangemaakt, hier werken we nu op door.
+Alles staat nu klaar om de QnA Maker service aan te kunnen roepen. In lab 1 heb je de stap `AnswerQuestionStepAsync()` aangemaakt in `QuestionDialog`, hier werken we nu op door.
 
 - Vervang de implementatie van de functie door het volgende:
     - Benader de QnA service om te kijken of deze de vraag van de gebruiker herkent en een antwoord erop heeft, gebruik hiervoor de `GetAnswersAsync()` functie.
@@ -107,5 +107,5 @@ Zowel hier, als door middel van de emulator, kun je de gepubliceerde bot testen.
 ## **Klaar**
 
 Gefelicteerd! Je hebt nu kennis van het Microsoft Bot Framework en bent in staat hiermee te ontwikkelen, lekker bezig!
-Wil je toch nog even door? Dan kan je je bot nog uitbreiden met LUIS [door middel van deze uitleg](). LUIS is een op machine learning gebaseerde service om het begrip van natuurlijke taal te integeren.
+Wil je toch nog even door? Dan kan je je bot nog uitbreiden met LUIS [door middel van deze uitleg](https://docs.microsoft.com/en-us/azure/bot-service/bot-builder-howto-v4-luis?view=azure-bot-service-4.0&tabs=csharp). LUIS is een op machine learning gebaseerde service om het begrip van natuurlijke taal te integeren.
 

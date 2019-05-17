@@ -2,7 +2,7 @@
 In dit lab maak je kennis met het Microsoft Bot Framework door een chat bot te ontwikkelen die een gebruiker kan herkennen.
 Deze bot zal gebruik maken van dialogs.
 
-Er is [een uitwerkinging](./FinishedSolutions) beschikbaar voor het geval je ergens vast komt te zitten.
+Er is [een uitwerking](./FinishedSolutions) beschikbaar voor het geval je ergens vast komt te zitten.
 
 ## **Prerequisites**
 - Visual Studio 2017 of nieuwer.
@@ -75,7 +75,12 @@ Daarnaast registreren we de UserState en ConversationState, deze worden bij het 
     private BotState _conversationState;
     private BotState _userState;
 
-    // Bij het genereren wordt deze class EmptyBot genoemd, indien gewenst kun je dit hernoemen zodat dit overeenkomt met de naam van het project. Controleer dan of dit op elke locatie hernoemd is.
+
+    /* 
+        Bij het genereren wordt deze class EmptyBot genoemd, indien gewenst kun je dit
+        hernoemen zodat dit overeenkomt met de naam van het project.
+        Zorg er dan voor dat dit op elke locatie hernoemd wordt.
+    */ 
     public EmptyBot(ConversationState conversationState, UserState userState)
     {
         _conversationState = conversationState;
@@ -99,7 +104,7 @@ Voordat we gebruik kunnen maken van onze de state properties, dienen we eerst de
 
 **2.4 - Herkennen gebruiker)**
 
-Nu alles klaar voor gebruik is kan er functionaliteit worden toegevoegd aan de bot. Om kennis te maken met hoe dit te werk gaat zullen we een bot maken die een gebruiker kan herkennen. De gewenste uitvoer is als volgt:
+Nu alles klaar voor gebruik is kan er functionaliteit worden toegevoegd aan de bot. Om kennis te maken met hoe dit te werk gaat, zullen we een bot maken die een gebruiker kan herkennen. De gewenste uitvoer is als volgt:
 
 <img src="../Resources/Images/lab01_04.png?raw=true" height="350">
 
@@ -157,9 +162,9 @@ In de vorige opdracht heb je functionaliteit toegevoegd om de naam van de gebrui
     }
     ```
 
-In de variabele `waterfallSteps` staan twee functienamen, dit houdt in dat dit dialoog (UserProfileDialog) bestaat uit twee stappen; `AskForNameStepAsync`, en `NameConfirmStepAsync`. Deze zullen in de volgorde uitgevoerd worden.
+In de variabele `waterfallSteps` staan twee functienamen, dit houdt in dat dit dialoog (UserProfileDialog) bestaat uit twee stappen; `AskForNameStepAsync`, en `NameConfirmStepAsync`. Deze zullen in de volgorde uitgevoerd worden waarin ze zijn toegevoegd.
 
-Merk op dat we een nieuw `TextPrompt` aanmaken met de naam `NamePrompt`, door middel van prompts kan informatie aan de gebruiker gevraagd worden. Deze prompt kunnen voorzien worden van verschillende opties en validators. In deze opdracht maken we hier echter geen gebruik van.
+Merk op dat we een nieuw `TextPrompt` aanmaken met de naam `NamePrompt`, door middel van prompts kan informatie aan de gebruiker gevraagd worden. Deze prompts kunnen voorzien worden van verschillende opties en validators. In deze opdracht maken we hier echter geen gebruik van.
 
 - Voeg de onderstaande functie toe aan `UserProfileDialog.cs`.
 
@@ -175,7 +180,7 @@ Merk op dat we een nieuw `TextPrompt` aanmaken met de naam `NamePrompt`, door mi
     }
     ```
 
-De volgende stap van het dialoog is het opslaan van de naam van de gebruiker. Het resultaat van de vorige stap is door middel van de `stepContext` beschikbaar. Dit resultaat wordt in de UserState geplaatst, dit wordt aan het einde van de turn opgeslagen door de code in de `OnTurnAsync()` functie in `kennisAvondBot.cs`.
+De volgende stap van het dialoog is het opslaan van de naam van de gebruiker. Het resultaat van de vorige stap is door middel van de `stepContext` beschikbaar. Het resultaat wordt in de UserState geplaatst, dit wordt aan het einde van de turn opgeslagen door de code in de `OnTurnAsync()` functie in `kennisAvondBot.cs`.
 Omdat dit de laatste stap in het dialoog is, wordt hier als laatste `EndDialogAsync()` aangeroepen om het dialoog te beëindigen.
 
 - Voeg de onderstaande functie toe aan `UserProfileDialog.cs`.
@@ -194,7 +199,7 @@ Omdat dit de laatste stap in het dialoog is, wordt hier als laatste `EndDialogAs
 
 **3.2 - Dialog aanroepen)**
 
-Nu het dialoog klaar staat, kan deze aangeroepen worden. Om het dialoog aan te roepen hebben we een aantal dingen nodig, deze dingen zullen we nu aanmaken. Als eerste maken we de DialogSet aan, hier voegen we het dialoog aan toe die we zojuist hebben aangemaakt.
+Nu het dialoog klaar staat, kan deze aangeroepen worden. Om het dialoog aan te roepen hebben we een aantal dingen nodig, deze zullen we nu aanmaken. Als eerste maken we de DialogSet aan, hier voegen we het dialoog aan toe die we zojuist hebben aangemaakt.
 
 - Voeg de onderstaande code toe aan de constructor in het `kennisAvondBot.cs` bestand, definiëer daarnaast ook de `_dialogSet` property in de class.
 
@@ -215,7 +220,7 @@ Daarnaast maken we de dialogContext aan, hiermee kunnen we interacteren met onze
 
 
 - Vervang de functionaliteit in `OnMessageActivityAsync()` zoals gemaakt in opdracht 2.4 met het volgende:
-    - Doe indien er al een dialoog actief is niets.
+    - Doe indien er al een dialoog actief is niets. Door de functie `ContinueDialogAsync()` wordt de volgende stap van een actief dialoog in gang gezet, daarom hoeven we verder niets te doen.
     - Start, indien de naam van de gebruiker nog niet bekend is, het zojuist aangemaakte dialoog. Gebruik als dialogId `nameof(UserProfileDialog)`.
     - Indien de naam van de gebruiker wel bekend is, de bot reageert met iets als _'Hoi {naam}'_.
 
@@ -229,7 +234,7 @@ Daarnaast maken we de dialogContext aan, hiermee kunnen we interacteren met onze
 In lab 2 gaan we een cognitieve service koppelen aan de bot. Als opzet hiervoor hebben we nog een dialoog nodig, in deze opdracht gaan we dit dialoog maken.
 
 Maak een nieuw dialoog aan genaamd `QuestionDialog` en zorg ervoor dat:
-- Wanneer de gebruiker `vraag` intypt, het dialoog wordt aangeroepen.
+- Wanneer de gebruiker _'vraag'_ intypt, het dialoog wordt aangeroepen.
 - Dit dialoog als eerste stap aan de gebruiker de vraag stelt _'Wat is je vraag {gebruikersnaam}?'_.
 - Dit dialoog als tweede stap reageert met _'Sorry, ik heb geen antwoord op de vraag {vraag}.'_.
 
