@@ -7,7 +7,7 @@ Er is [een uitwerking](./FinishedSolutions) beschikbaar voor het geval je ergens
 ## **Prerequisites**
 - Visual Studio 2017 of nieuwer.
 - Het Bot Framework v4 SDK [template voor C#](https://marketplace.visualstudio.com/items?itemName=BotBuilder.botbuilderv4) is geïnstalleerd.
-- [Microsoft Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator/releases/tag/v4.3.3) is geïnstalleerd.
+- [Microsoft Bot Framework Emulator](https://github.com/microsoft/BotFramework-Emulator/releases/tag/v4.4.1) is geïnstalleerd.
 
 
 ---
@@ -27,18 +27,20 @@ Maak een .bot bestand aan, dit doe je door een nieuwe bot configuratie in de Bot
 
 <img src="../Resources/Images/lab01_02.png?raw=tru" height="350">
 
+Start de bot via Visual Studio en open in de emulator een conversatie hiermee. Controleer of de bot ‘Hello World!’ stuurt.
 
 **1.3 - Reactie)**
 
-Implementeer de OnMessageActivityAsync functie. Laat de bot door middel hiervan een reactie geven op een inkomend bericht van een gebruiker.
+Implementeer de OnMessageActivityAsync functie. Laat de bot door middel hiervan een reactie geven op een inkomend bericht van een gebruiker. Controleer hier de invoer van de gebruiker, groet de gebruiker indien deze invoer gelijk is aan een begroeting als _'hoi'_ of _'hallo'_.
 
 ```C#
 protected override async Task OnMessageActivityAsync(ITurnContext<IMessageActivity> turnContext, CancellationToken cancellationToken)
 {
-    // Schrijf hier code om een bericht naar de gebruiker te sturen.
+    // Controleer de invoer van de gebruiker, is dit een begroeting?
+        // Schrijf hier code om een bericht naar de gebruiker te sturen.
 }
 ```
-Start de bot via Visual Studio en open in de emulator een conversatie hiermee. Controleer of de bot ‘Hello World!’ stuurt, en of deze reageert op de input van de gebruiker zoals zojuist gedefinieerd.
+Stuur een bericht naar de bot en controleer of deze reageert op de input van de gebruiker zoals zojuist gedefinieerd. Een voorbeeld hiervan is als volgt:
 
 <img src="../Resources/Images/lab01_03.png?raw=true" height="200">
 
@@ -104,9 +106,7 @@ Voordat we gebruik kunnen maken van onze de state properties, dienen we eerst de
 
 **2.4 - Herkennen gebruiker)**
 
-Nu alles klaar voor gebruik is kan er functionaliteit worden toegevoegd aan de bot. Om kennis te maken met hoe dit te werk gaat, zullen we een bot maken die een gebruiker kan herkennen. De gewenste uitvoer is als volgt:
-
-<img src="../Resources/Images/lab01_04.png?raw=true" height="350">
+Nu alles klaar voor gebruik is kan er functionaliteit worden toegevoegd aan de bot. Om kennis te maken met hoe dit te werk gaat, zullen we een bot maken die een gebruiker kan herkennen.
 
 Zorg ervoor dat:
 - De bot controleert of de naam van de gebruiker al bekend is of niet.
@@ -115,6 +115,7 @@ Zorg ervoor dat:
         - Indien dit wel het geval is de bot de inhoud van het bericht van de gebruiker opslaat als de naam van de gebruiker.
     - Indien dit wel het geval is de bot reageert met iets als ‘Hoi {naam}’.
 - De bot na elke turn de eventuele veranderingen opslaat. Gebruik hiervoor de onderstaande code in het `kennisAvondBot.cs` bestand.
+
 
     ```C#
     public override async Task OnTurnAsync(ITurnContext turnContext, CancellationToken cancellationToken)
@@ -128,6 +129,10 @@ Zorg ervoor dat:
 
 > Tip: Om een nieuw gesprek te beginnen als dezelfde gebruiker, druk op het uitklapbare pijltje links naast 'Resart conversation' in de Emulator, en selecteer 'Restart with same user ID'.
 
+
+Onderstaand een voorbeeld van de gewenste uitvoer:
+
+<img src="../Resources/Images/lab01_04.png?raw=true" height="350">
 
 ---
 
@@ -226,7 +231,7 @@ Daarnaast maken we de dialogContext aan, hiermee kunnen we interacteren met onze
 
 
 
-> Tip: Het gebruik van `PromptedForName` uit de ConversationState is nu niet meer nodig.
+> Tip: Het gebruik van `PromptedForName` uit de ConversationState is nu niet meer nodig. Gebruik nu de gegeven boolean `activeDialog`.
 
 
 **3.3 - Nieuw dialoog)**
