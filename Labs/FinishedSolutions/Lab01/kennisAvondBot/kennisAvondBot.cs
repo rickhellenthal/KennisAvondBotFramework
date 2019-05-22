@@ -38,6 +38,37 @@ namespace kennisAvondBot
             var userStateAccessors = _userState.CreateProperty<UserProfile>(nameof(UserProfile));
             var userProfile = await userStateAccessors.GetAsync(turnContext, () => new UserProfile());
 
+
+            /*
+             *  -===================-
+             *      Assignment 2
+             *  -==--           --==-
+             */
+            //if (string.IsNullOrEmpty(userProfile.Name))
+            //{
+            //    if (!conversationData.PromptedForName)
+            //    {
+            //        await turnContext.SendActivityAsync(MessageFactory.Text("Hallo, volgens mij hebben wij elkaar nog niet ontmoet."));
+            //        await turnContext.SendActivityAsync(MessageFactory.Text("Wat is je naam?"));
+            //        conversationData.PromptedForName = true;
+            //    }
+            //    else
+            //    {
+            //        userProfile.Name = turnContext.Activity.Text?.Trim();
+            //        await turnContext.SendActivityAsync(MessageFactory.Text($"Hoi {userProfile.Name}"));
+            //    }
+            //}
+            //else
+            //{
+            //    await turnContext.SendActivityAsync(MessageFactory.Text($"Hoi {userProfile.Name}"));
+            //}
+            
+
+            /*
+             *  -===================-
+             *      Assignment 3
+             *  -==--           --==-
+             */
             // Create the dialogContext
             var dialogContext = await _dialogSet.CreateContextAsync(turnContext, cancellationToken);
             var results = await dialogContext.ContinueDialogAsync(cancellationToken);
