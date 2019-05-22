@@ -21,7 +21,7 @@ De eerste stap is het opzetten en inrichten van de **knowledge base** in het [Qn
 - Volg de stappen de in het portaal worden uitgelegd, een paar toevoegingen hierbij:
     - Bij stap 1:
         - Selecteer _F0_ bij _pricing tier_
-        - Selecteer _F_ bij _search pricing tier_
+        - Selecteer (indien mogelijk) _F_ bij _search pricing tier_, kies anders voor _B_
         - Zet _App insights_ uit
     - Bij stap 4:
         - Het inladen van een document kun je overslaan, we gaan handmatig vragen toevoegen. Indien gewenst kan je _chit-chat_ toevoegen aan je knowledge base. Dit is echter alleen beschikbaar in het Engels.
@@ -84,7 +84,7 @@ Nu de bot functionaliteit heeft, is het tijd om hem te publiceren!
 
 - Maak in het [Azure portaal](https://portal.azure.com) een nieuwe _Web App Bot_ resource aan.
     - Zet de _location_ op _West Europe_.
-    - Bij _pricing tier_, druk op _View full pricing details_ en selecteer _F0 Free_.
+    - Bij _pricing tier_, druk op _View full pricing details_ en selecteer (indien mogelijk) _F0 Free_.
     - Kies bij _Bot Template_ voor _Echo Bot_. Deze code wordt dadelijk overschreven door de code die we gemaakt hebben tijdens de labs. De reden dat we hier voor _Echo Bot_ kiezen als template is omdat er anders een extra resource (LUIS App) wordt aangemaakt.
     - Kies dezelfde _App sevice plan_ als die je gebruikt voor de QnA Maker Service.
 
